@@ -1,0 +1,37 @@
+[package]
+name = "oono"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "oono"
+path = "src/lib.rs"
+
+[[bin]]
+name = "oono"
+path = "src/main.rs"
+
+[dependencies]
+egui = "0.18"
+eframe = { version = "0.18", features = ["persistence"]}
+tracing-subscriber = "0.3"
+rand = "0.8"
+egui_extras = "0.18.0"
+index_list = "0.2.7"
+rmp-serde = "1.1"
+reqwest = { version = "0.11", features = ["json"] }
+
+serde = { version = "1.0", features = ["derive"] }
+tokio = {version = "1.20.0", features = ["sync", "rt-multi-thread"]}
+tokio-stream = "0.1"
+
+[dependencies.uuid]
+version = "1.1.2"
+features = [
+    "v4",                # Lets you generate random UUIDs
+    "fast-rng",          # Use a faster (but still sufficiently random) RNG
+    "serde",
+]
+
+[profile.dev.package."*"]
+opt-level = 3

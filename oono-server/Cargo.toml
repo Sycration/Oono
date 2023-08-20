@@ -1,0 +1,15 @@
+[package]
+name = "oono-server"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+oono = {path = "../oono-client"}
+uuid = "1.1.2"
+rocket = { version = "0.5.0-rc.2", features = ["msgpack", "json"]}
+dashmap = "5.3.4"
+rand = "0.8.5"
+
+[profile.dev.package."*"]
+opt-level = 3

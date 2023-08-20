@@ -1,0 +1,4 @@
+- [ X ] Do not hardcode the server to localhost
+- [ X ] Prevent cheating with ephemeral user auth
+- [ X ] Server event loop
+- [ X ] Game UI with scrolling sorted card list
